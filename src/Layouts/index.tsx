@@ -54,7 +54,7 @@ const LayoutPage: React.FC<SEOProps> = ({ children, ...rest }) => {
   };
 
   // 实际上就是一个写死的false值
-  const authLayout = false; // = router.pathname.startsWith('/auth');
+  // const authLayout = false; // = router.pathname.startsWith('/auth');
 
   return (
     <Fragment>
