@@ -7,8 +7,8 @@ import { SidebarBody, SidebarRefObject, Sidebar } from '@paljs/ui/Sidebar';
 import Header from './Header';
 import SimpleLayout from './SimpleLayout';
 import { useRouter } from 'next/router';
-import { EvaIcon } from '@paljs/ui/Icon';
-import { Button } from '@paljs/ui/Button';
+// import { EvaIcon } from '@paljs/ui/Icon';
+// import { Button } from '@paljs/ui/Button';
 import { Menu, MenuRefObject } from '@paljs/ui/Menu';
 import Link from 'next/link';
 import menuItems from './menuItem';
@@ -53,6 +53,7 @@ const LayoutPage: React.FC<SEOProps> = ({ children, ...rest }) => {
     setDir(newDir);
   };
 
+  // 实际上就是一个写死的false值
   const authLayout = false; // = router.pathname.startsWith('/auth');
 
   return (
