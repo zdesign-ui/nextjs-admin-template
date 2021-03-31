@@ -53,7 +53,7 @@ const LayoutPage: React.FC<SEOProps> = ({ children, ...rest }) => {
     setDir(newDir);
   };
 
-  const authLayout = router.pathname.startsWith('/auth');
+  const authLayout = false; // = router.pathname.startsWith('/auth');
 
   return (
     <Fragment>
@@ -80,21 +80,6 @@ const LayoutPage: React.FC<SEOProps> = ({ children, ...rest }) => {
                   responsive
                   className="menu-sidebar"
                 >
-                  {seeHeader && (
-                    <header>
-                      <Button
-                        size="Tiny"
-                        status="Primary"
-                        onClick={() => {
-                          setMenuState(!menuState);
-                          menuRef.current?.toggle();
-                        }}
-                        fullWidth
-                      >
-                        {menuState ? <EvaIcon name="arrow-circle-up" /> : <EvaIcon name="arrow-circle-down" />}
-                      </Button>
-                    </header>
-                  )}
                   <SidebarBody>
                     <Menu
                       nextJs
@@ -112,7 +97,6 @@ const LayoutPage: React.FC<SEOProps> = ({ children, ...rest }) => {
                 <LayoutColumns>
                   <LayoutColumn className="main-content">{children}</LayoutColumn>
                 </LayoutColumns>
-                {!authLayout && <LayoutFooter>Footer</LayoutFooter>}
               </LayoutContent>
             </LayoutContainer>
           </Layout>
