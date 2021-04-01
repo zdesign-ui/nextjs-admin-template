@@ -24,12 +24,6 @@ const HeaderStyle = styled.div`
 
 interface HeaderProps {
   toggleSidebar: () => void;
-  // theme: {
-  //   set: (value: DefaultTheme['name']) => void;
-  //   value: DefaultTheme['name'];
-  // };
-  // changeDir: () => void;
-  // dir: 'rtl' | 'ltr';
 }
 
 const Header: React.FC<HeaderProps> = (props) => {

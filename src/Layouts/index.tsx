@@ -37,10 +37,10 @@ const LayoutPage: React.FC<SEOProps> = ({ children, ...rest }) => {
     setSeeHeader(state !== 'compacted');
   };
 
-  const changeTheme = (newTheme: DefaultTheme['name']) => {
-    setTheme(newTheme);
-    typeof localStorage !== 'undefined' && localStorage.setItem('theme', newTheme);
-  };
+  // const changeTheme = (newTheme: DefaultTheme['name']) => {
+  //   setTheme(newTheme);
+  //   typeof localStorage !== 'undefined' && localStorage.setItem('theme', newTheme);
+  // };
 
   useEffect(() => {
     const localTheme = getDefaultTheme();
@@ -49,10 +49,10 @@ const LayoutPage: React.FC<SEOProps> = ({ children, ...rest }) => {
     }
   }, []);
 
-  const changeDir = () => {
-    const newDir = dir === 'ltr' ? 'rtl' : 'ltr';
-    setDir(newDir);
-  };
+  // const changeDir = () => {
+  //   const newDir = dir === 'ltr' ? 'rtl' : 'ltr';
+  //   setDir(newDir);
+  // };
 
   // 实际上就是一个写死的false值
   // const authLayout = false; // = router.pathname.startsWith('/auth');
@@ -64,11 +64,11 @@ const LayoutPage: React.FC<SEOProps> = ({ children, ...rest }) => {
         <Fragment>
           <SimpleLayout />
           {/* <Layout evaIcons={icons} dir={dir} className={!authLayout ? 'auth-layout' : ''}> */}
-          <Layout evaIcons={icons} dir={dir} className={'auth-layout'}>
+          <Layout evaIcons={icons} className={'auth-layout'}>
             <Header
-              dir={dir}
-              changeDir={changeDir}
-              theme={{ set: changeTheme, value: theme }}
+              // dir={dir}
+              // changeDir={changeDir}
+              // theme={{ set: changeTheme, value: theme }}
               toggleSidebar={() => sidebarRef.current?.toggle()}
             />
             <LayoutContainer>
