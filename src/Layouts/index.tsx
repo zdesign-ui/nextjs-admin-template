@@ -64,7 +64,7 @@ const LayoutPage: React.FC<SEOProps> = ({ children, ...rest }) => {
         <Fragment>
           <SimpleLayout />
           {/* <Layout evaIcons={icons} dir={dir} className={!authLayout ? 'auth-layout' : ''}> */}
-          <Layout evaIcons={icons} className={'auth-layout'}>
+          <Layout evaIcons={icons} className={''}>
             <Header toggleSidebar={() => sidebarRef.current?.toggle()} />
             <LayoutContainer>
               <Sidebar
