@@ -7,8 +7,8 @@ import { LayoutHeader } from '@paljs/ui/Layout';
 // import { EvaIcon } from '@paljs/ui/Icon';
 // import { Button } from '@paljs/ui/Button';
 import { Actions } from '@paljs/ui/Actions';
-import ContextMenu from '@paljs/ui/ContextMenu';
-import User from '@paljs/ui/User';
+// import ContextMenu from '@paljs/ui/ContextMenu';
+// import User from '@paljs/ui/User';
 import { breakpointDown } from '@paljs/ui/breakpoints';
 
 const HeaderStyle = styled.div`
@@ -40,15 +40,6 @@ const HeaderStyle = styled.div`
   }
 `;
 
-// const Label = styled.span`
-//   display: flex;
-//   align-items: center;
-// `;
-
-// const SelectStyled = styled(Select)`
-//   min-width: 150px;
-// `;
-
 interface HeaderProps {
   toggleSidebar: () => void;
   theme: {
@@ -60,46 +51,8 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = (props) => {
-  const router = useRouter();
-  // const themeOptions = () => [
-  //   {
-  //     value: 'default',
-  //     label: (
-  //       <Label>
-  //         <EvaIcon name="droplet" options={{ fill: '#a6c1ff' }} />
-  //         Default
-  //       </Label>
-  //     ),
-  //   },
-  //   {
-  //     value: 'dark',
-  //     label: (
-  //       <Label>
-  //         <EvaIcon name="droplet" options={{ fill: '#192038' }} />
-  //         Dark
-  //       </Label>
-  //     ),
-  //   },
-  //   {
-  //     value: 'cosmic',
-  //     label: (
-  //       <Label>
-  //         <EvaIcon name="droplet" options={{ fill: '#5a37b8' }} />
-  //         Cosmic
-  //       </Label>
-  //     ),
-  //   },
-  //   {
-  //     value: 'corporate',
-  //     label: (
-  //       <Label>
-  //         <EvaIcon name="droplet" options={{ fill: '#3366ff' }} />
-  //         Corporate
-  //       </Label>
-  //     ),
-  //     selected: true,
-  //   },
-  // ];
+  // const router = useRouter();
+
   return (
     <LayoutHeader fixed>
       <HeaderStyle>
@@ -121,7 +74,7 @@ const Header: React.FC<HeaderProps> = (props) => {
             },
           ]}
         />
-        <Actions
+        {/* <Actions
           size="Small"
           className="right"
           actions={[
@@ -143,7 +96,7 @@ const Header: React.FC<HeaderProps> = (props) => {
               ),
             },
           ]}
-        />
+        /> */}
       </HeaderStyle>
     </LayoutHeader>
   );
