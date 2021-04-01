@@ -65,12 +65,7 @@ const LayoutPage: React.FC<SEOProps> = ({ children, ...rest }) => {
           <SimpleLayout />
           {/* <Layout evaIcons={icons} dir={dir} className={!authLayout ? 'auth-layout' : ''}> */}
           <Layout evaIcons={icons} className={'auth-layout'}>
-            <Header
-              // dir={dir}
-              // changeDir={changeDir}
-              // theme={{ set: changeTheme, value: theme }}
-              toggleSidebar={() => sidebarRef.current?.toggle()}
-            />
+            <Header toggleSidebar={() => sidebarRef.current?.toggle()} />
             <LayoutContainer>
               <Sidebar
                 getState={getState}

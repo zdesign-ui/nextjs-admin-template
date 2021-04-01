@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 // import { useRouter } from 'next/router';
-import styled, { DefaultTheme } from 'styled-components';
+import styled from 'styled-components';
 // import Select from '@paljs/ui/Select';
 import { LayoutHeader } from '@paljs/ui/Layout';
 // import { EvaIcon } from '@paljs/ui/Icon';
